@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+/* header {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav li {
+    margin-left: 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav {
+        margin-top: 10px; 
+        justify-content: center; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+} */
+
+/* ====================================================================================================== */
+
+body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 35%, rgba(36, 59, 159, 0.5214460784313726) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4206057422969187) 0%, rgba(36, 59, 159, 0.5214460784313726) 100%);
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos en la caja */
+    justify-content: space-between; /* Distribuye el espacio entre el logo y el menú */
+}
+
+nav {
+    position: absolute;
+    top: 50%; /* Centra verticalmente el menú */
+    right: 0;
+    transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;    
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-bottom: 10px double #030303;
+    border-left: 4px double #000000;
+}
+
+/* .productos li img {
+    mix-blend-mode: multiply;
+} */
+
+.productos h2 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ================================================================================================================== */
+
+/* Logo */
+h1 img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2)); /* Agrega sombra suave al logo */
+}
+
+/* Efecto de Hover en el Menú */
+nav a:hover {
+    color: #3366cc; /* Cambia el color al pasar el ratón */
+}
+
+/* Overlay en Imágenes de Productos */
+.productos li {
+    position: relative;
+    overflow: hidden; /* Asegura que el pseudo-elemento ::before no sobresalga del li */
+}
+
+.productos li img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay con transparencia */
+}
+
+.productos li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 10px double;
+    border-left: 4px double;
+    mix-blend-mode: multiply;
+    animation: colorChange 4s infinite;
+    border-radius: 0 100px 0 0;
+}
+
+/* Efecto de Hover en Productos */
+.productos li:hover{
+    background: transparent;
+    border-bottom: 10px double;
+    border-left: 4px double;
+    animation: borderAnimation 6s infinite, colorChange 6s infinite; /* Aplica la animación al borde */
+    
+}
+
+/* Efecto de Hover en la Imagen */
+.productos li img {
+    mix-blend-mode: multiply;
+    transition: filter 6s ease; /* Agrega una transición al filtro */
+}
+
+.productos li:hover img {
+    filter: hue-rotate(90deg); /* Gira el matiz de la imagen al realizar un hover */
+    animation: borderAnimation 4s infinite; /* Aplica la animación al borde */
+}
+
+/* Mejora de Fuentes y Espaciado */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Efecto de Borde Animado en Productos al Hover */
+@keyframes borderAnimation {
+    0% {
+        border-color: silver;
+    }
+    25% {
+        border-color: silver;
+    }
+    50% {
+        border-color: black;
+    }
+    75% {
+        border-color: silver;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+/* Efecto de Cambio de Color en Productos al Hover */
+@keyframes colorChange {
+    0% {
+        background-color: transparent; /* Cambia el color al rojo */
+    }
+    25% {
+        background-color: white; /* Cambia el color al verde */
+    }
+    50% {
+        background-color: transparent; /* Cambia el color al azul */
+    }
+    75% {
+        background-color: white; /* Cambia el color al amarillo */
+    }
+    100% {
+        background-color: transparent; /* Cambia el color al magenta */
+    }
+}

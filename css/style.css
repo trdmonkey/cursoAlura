@@ -1,0 +1,59 @@
+body {
+    background: white;
+}
+
+img {
+    display: block;
+    margin: auto;
+    
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    background: whitesmoke;
+}
+
+em span {
+    color: brown;
+    font-size: 20px;
+}
+
+p {
+    height: 50px;
+    padding: 50px;
+    border-radius: 50px 0 20px 0;
+}
+
+h2 {
+    text-align: center;
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.diferenciales {
+    display: flex;
+    border: 1px solid green;
+    background: linear-gradient(yellowgreen, white, green);
+    border-radius: 5px;
+}
+
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    /* margin-right: 15%; */
+    padding: 50px;
+}
+
+.imgDiferenciales {
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid greenyellow;
+    padding: 5px;
+    background: whitesmoke;
+}
+

@@ -153,7 +153,8 @@ h1 img {
 
 /* Efecto de Hover en el Menú */
 nav a:hover {
-    color: #3366cc; /* Cambia el color al pasar el ratón */
+    color: whitesmoke; /* Cambia el color al pasar el ratón */
+    filter: brightness(1.5);
 }
 
 /* Overlay en Imágenes de Productos */
@@ -249,4 +250,24 @@ body {
     100% {
         background-color: transparent; /* Cambia el color al magenta */
     }
+}
+
+footer {
+    text-align: center;
+    background: url(ima);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+footer img, footer p {
+    mix-blend-mode: overlay;
+}
+
+footer p {
+    padding-bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
 }
